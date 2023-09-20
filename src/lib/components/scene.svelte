@@ -3,6 +3,7 @@
   import { GLTF, useGltf, Grid, Float, ContactShadows, interactivity, OrbitControls } from "@threlte/extras";
 
   const strawberry_component = import("$lib/components/strawberry.svelte").then(({ default: C }) => C);
+  const scale_component = import("$lib/components/scale.svelte").then(({ default: C }) => C);
 
   // import Strawberry from "$lib/components/strawberry.svelte";
   // import { spring } from "svelte/motion";
@@ -18,7 +19,7 @@
   // };
 </script>
 
-<T.PerspectiveCamera makeDefault position={[10, 8, 15]} fov={30}>
+<T.PerspectiveCamera makeDefault position={[5, 10, 13]} fov={12}>
   <OrbitControls enableZoom={false} enablePan={false} enableDamping autoRotate autoRotateSpeed={2.0} />
 </T.PerspectiveCamera>
 
@@ -46,14 +47,13 @@
     <T.MeshStandardMaterial color="lightGrey" />
   </T.Mesh> -->
 <!-- <GLTF castShadow receiveShadow interactive scale={1} url={"assets/rainbow_morph/scene.gltf"} /> -->
-<T.Mesh position={[0, -1]}>
-  {#await strawberry_component}
+<T.Mesh>
+  {#await scale_component}
     Loading...
   {:then Component}
-    <!-- <Component /> -->
-    <GLTF castShadow receiveShadow interactive scale={3} url={"assets/digital_weight_scale/scene.gltf"} />
+    <Component />
   {/await}
-  <ContactShadows scale={10} blur={2} far={5} opacity={0.3} />
+  <ContactShadows scale={10} blur={2} far={5} opacity={0.2} />
 </T.Mesh>
 <!-- </Float> -->
 
