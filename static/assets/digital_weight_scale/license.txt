@@ -1,0 +1,11 @@
+Model Information:
+* title:	Digital Weight Scale
+* source:	https://sketchfab.com/3d-models/digital-weight-scale-1b1b2ad2f06640528e67c1c37e0359b0
+* author:	Dimitri (https://sketchfab.com/dimitri_blender)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Digital Weight Scale" (https://sketchfab.com/3d-models/digital-weight-scale-1b1b2ad2f06640528e67c1c37e0359b0) by Dimitri (https://sketchfab.com/dimitri_blender) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

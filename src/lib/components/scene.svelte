@@ -45,18 +45,16 @@
     <T.BoxGeometry />
     <T.MeshStandardMaterial color="lightGrey" />
   </T.Mesh> -->
-
 <!-- <GLTF castShadow receiveShadow interactive scale={1} url={"assets/rainbow_morph/scene.gltf"} /> -->
-<T.Mesh position={[0, -4]}>
-  <!-- <GLTF castShadow receiveShadow interactive scale={1.2} url={"assets/strawberry.gltf"} /> -->
+<T.Mesh position={[0, -1]}>
   {#await strawberry_component}
     Loading...
   {:then Component}
-    <Component />
+    <!-- <Component /> -->
+    <GLTF castShadow receiveShadow interactive scale={3} url={"assets/digital_weight_scale/scene.gltf"} />
   {/await}
   <ContactShadows scale={10} blur={2} far={5} opacity={0.3} />
 </T.Mesh>
-<!-- <GLTF interactive scale={3} url={"https://threejs.org/examples/models/gltf/Xbot.glb"} /> -->
 <!-- </Float> -->
 
 <!-- <Box on:click={setRandomPos} position.x={$pos.x} position.z={$pos.z} /> -->
