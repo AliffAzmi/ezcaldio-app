@@ -1,7 +1,10 @@
 <script>
   import { T } from "@threlte/core";
-  import { GLTF, Grid, Float, ContactShadows, interactivity, OrbitControls } from "@threlte/extras";
-  import { OrthographicCamera } from "three";
+  import { GLTF, useGltf, Grid, Float, ContactShadows, interactivity, OrbitControls } from "@threlte/extras";
+
+  const strawberry_component = import("$lib/components/strawberry.svelte").then(({ default: C }) => C);
+
+  // import Strawberry from "$lib/components/strawberry.svelte";
   // import { spring } from "svelte/motion";
   // import Box from "$lib/components/Box.svelte";
   // const { target } = interactivity();
@@ -38,20 +41,20 @@
 > -->
 <!-- position.y={0.5} -->
 <!-- position.z={1.5} -->
-  <!-- <T.Mesh>
+<!-- <T.Mesh>
     <T.BoxGeometry />
     <T.MeshStandardMaterial color="lightGrey" />
   </T.Mesh> -->
 
 <!-- <GLTF castShadow receiveShadow interactive scale={1} url={"assets/rainbow_morph/scene.gltf"} /> -->
 <T.Mesh position={[0, -4]}>
-  <GLTF castShadow receiveShadow interactive scale={1.2} url={"assets/strawberry.gltf"} />
-  <ContactShadows
-    scale={10}
-    blur={2}
-    far={5}
-    opacity={0.3}
-  />
+  <!-- <GLTF castShadow receiveShadow interactive scale={1.2} url={"assets/strawberry.gltf"} /> -->
+  {#await strawberry_component}
+    Loading...
+  {:then Component}
+    <Component />
+  {/await}
+  <ContactShadows scale={10} blur={2} far={5} opacity={0.3} />
 </T.Mesh>
 <!-- <GLTF interactive scale={3} url={"https://threejs.org/examples/models/gltf/Xbot.glb"} /> -->
 <!-- </Float> -->

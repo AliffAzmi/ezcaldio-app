@@ -55,7 +55,7 @@ If you are very active (hard exercise/sports 6-7 days a week) : Calorie-Calculat
 If you are extra active (very hard exercise/sports & physical job or 2x training) : Calorie-Calculation = BMR x 1.9
 For example If you are sedentary, and your BMR equal 1745 so the total number of calories you need in order to maintain your current weight = 1745*1.2 = 2094. -->
 
-<div class="scene inset-0 bg-inherit w-full h-80">
+<div class="inset-0 bg-inherit w-full h-80">
   <Canvas>
     <Scene />
   </Canvas>
