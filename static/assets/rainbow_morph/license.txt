@@ -1,0 +1,11 @@
+Model Information:
+* title:	Rainbow morph animation
+* source:	https://sketchfab.com/3d-models/rainbow-morph-animation-18c96b42cf7d433ca72df475cd6ec4d8
+* author:	SenYul (https://sketchfab.com/senyul)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Rainbow morph animation" (https://sketchfab.com/3d-models/rainbow-morph-animation-18c96b42cf7d433ca72df475cd6ec4d8) by SenYul (https://sketchfab.com/senyul) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
