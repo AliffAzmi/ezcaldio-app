@@ -1,12 +1,13 @@
-<script>
+<script lang="ts">
   import Icon from "@iconify/svelte";
   import { Canvas } from "@threlte/core";
+  import { Suspense, Text } from "@threlte/extras";
 
   import activities from "$lib/data/activities.js";
 
   import Modal from "$lib/components/modal.svelte";
   import CheckBoxBtn from "$lib/components/checkboxBtn.svelte";
-  import Scene from "$lib/components/scene.svelte";
+  import Scene from "$lib/components/scenes/scale.svelte";
 
   let gender = "male";
   let calory_needed = "";
@@ -59,6 +60,13 @@ For example If you are sedentary, and your BMR equal 1745 so the total number of
   <Canvas>
     <Scene />
   </Canvas>
+  <!-- <div class="relative">
+    <Canvas>
+      <Suspense>
+        <Text color="black" text={`Calory: ${calory_needed}`} fontSize={1.2} textAlign="left" />
+      </Suspense>
+    </Canvas>
+  </div> -->
 </div>
 
 <div class="min-h-screen flex items-center justify-center pb-12 px-4 sm:px-6 lg:px-8">

@@ -1,4 +1,21 @@
-<div class=" flex flex-col justify-center items-center h-screen">
+<script lang="ts">
+  import Icon from "@iconify/svelte";
+
+  import FullScreenBlock from "$lib/components/fullscreenBlock.svelte";
+
+  function handleAnchorClick(event) {
+    event.preventDefault();
+    const link = event.currentTarget;
+    const anchorId = new URL(link.href).hash.replace("#", "");
+    const anchor = document.getElementById(anchorId);
+    window.scrollTo({
+      top: anchor.offsetTop,
+      behavior: "smooth",
+    });
+  }
+</script>
+
+<div class=" flex flex-col justify-center items-center h-screen snap-y">
   <div class="p-6 text-center">
     <p>
       <b>Lorem ipsum</b> dolor sit amet, consectetur adipiscing elit. Integer at tincidunt arcu. Aenean vitae feugiat eros,
@@ -10,17 +27,34 @@
       primis in faucibus. Nullam nec semper dui. Phasellus quis neque non metus tempus aliquam.
     </p>
   </div>
-  <a class=" btn btn-blue" href="/calorie-calculator" alt="link">Calorie Calulator</a>
+  <!-- <a class=" btn btn-blue" href="/calorie-calculator" alt="link">Calorie Calulator</a> -->
+  <div class="floating">
+    <a href="#anchor-idw-calculator" on:click={handleAnchorClick}>
+      <Icon width={35} icon="iconoir:page-down" />
+    </a>
+  </div>
 </div>
+<FullScreenBlock />
 
 <style>
-  .btn {
-    @apply font-bold py-2 px-4 rounded-md shadow-lg;
+  .floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
   }
-  .btn-blue {
-    @apply bg-blue-500 text-white;
-  }
-  .btn-blue:hover {
-    @apply bg-blue-700;
+
+  @keyframes floating {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      transform: translate(0, 15px);
+    }
+    100% {
+      transform: translate(0, -0px);
+    }
   }
 </style>
